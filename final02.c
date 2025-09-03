@@ -14,18 +14,21 @@ int main(){
     }
 
 
+    int impar = 0, par = 0;
     for(int linha = 0;linha < ordem;linha++){
-        printf("Linha [%d] = ",linha+1);
+        impar = 0;
+        par = 0;
+        printf("\nLinha [%d] = ",linha+1);
         for(int j = 0;j < ordem;j++){
             if(matriz[linha][j] % 2 == 0){
                 printf("[%2d]___par",matriz[linha][j]);
+                par++;
             } else {
                 printf("[%2d]_impar",matriz[linha][j]);
-            }
-            if(j < ordem - 1){
-                printf(" | ");
+                impar++;
             }
         }
-        printf("\n");
+        printf("|| = Pares: [%d] Impar: [%d]",par,impar);
     }
+
 }
